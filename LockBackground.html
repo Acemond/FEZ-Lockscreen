@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+		<link rel="stylesheet" type="text/css" href="styles/styleCube.css">
+		<link rel="stylesheet" type="text/css" href="styles/styleGomez.css">
+		<link rel="stylesheet" type="text/css" href="styles/styleText.css">
+		<link rel="stylesheet" type="text/css" href="styles/styleBG.css">
+		<link rel="stylesheet" type="text/css" href="styles/styleMiniCube.css">
+		<link rel="stylesheet" type="text/css" href="styles/styleFaces.css">
+
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="Config.js"></script>
+		<script type="text/javascript" src="scripts/script.js"></script>
+		<script type="text/javascript" src="scripts/gomez.js"></script>
+		<script type="text/javascript" src="scripts/gomezAnimation.js"></script>
+		<script type="text/javascript" src="scripts/rays.js"></script>
+		<script type="text/javascript" src="scripts/time.js"></script>
+	</head>
+	
+	
+	<body id="body" onLoad="windowLoaded()">
+		<div class="preload" id="preload-fezzy">by Acemond</div>
+		<img class="preload" id="preload_cube_border" src="./FEZ_resources/images/bordures.png"></img>
+		<img class="preload" id="preload_cube_faceExt" src="./FEZ_resources/images/facesExt.png"></img>
+		<img class="preload" id="preload_cube_faceInt" src="./FEZ_resources/images/facesInt.png"></img>
+		<img class="preload" id="preload_newCube_face" src="./FEZ_resources/images/noCube.png"></img>
+		
+		
+		<div id="background">
+			<div class="clouds" id="clouds2" name="clouds2"></div>
+			<div class="clouds" id="clouds1" name="clouds1"></div>
+			<div class="clouds" id="clouds0" name="clouds0"></div>
+			<div id="backgroundChange">
+				<div class="cloudsChange" id="cloudsChange2" name="cloudsChange2"></div>
+				<div class="cloudsChange" id="cloudsChange1" name="cloudsChange1"></div>
+				<div class="cloudsChange" id="cloudsChange0" name="cloudsChange0"></div>
+			</div>
+			<img id="sets" name="sets"></img>
+			<img id="setsChange" name="setsChange"></img>
+			<div id="miniSignal">
+				<img class="miniSignal" id="miniSignal1" src="./FEZ_resources/images/losange.png" ></img>
+				<img class="miniSignal" id="miniSignal2" src="./FEZ_resources/images/losange.png" ></img>
+				<img class="miniSignal" id="miniSignal3" src="./FEZ_resources/images/losange.png" ></img>
+				<img class="miniSignal" id="miniSignal4" src="./FEZ_resources/images/losange.png" ></img>
+			</div>
+		</div>
+			<img id="floor" name="floor"></img>
+			<img id="floorChange" name="floorChange"></img>
+		</div>
+		
+		<div id="miniCubeTrail">
+			<div id="miniCubeCont">
+				<div id="miniCube">
+					<img class="miniCubeFace" id="face1" src="./FEZ_resources/images/miniFace.png"></img>
+					<img class="miniCubeFace" id="face2" src="./FEZ_resources/images/miniFace.png"></img>
+					<img class="miniCubeFace" id="face3" src="./FEZ_resources/images/miniFace.png"></img>
+					<img class="miniCubeFace" id="face4" src="./FEZ_resources/images/miniFace.png"></img>
+					<img class="miniCubeFace" id="face5" src="./FEZ_resources/images/miniFace.png"></img>
+					<img class="miniCubeFace" id="face6" src="./FEZ_resources/images/miniFace.png"></img>
+				</div>
+				<!--<img id="miniCubeLight" src="./FEZ_resources/images/miniCubeLight.png"></img>-->
+			</div>
+		</div>
+
+		<img id="seagull" name="seagull" src="./FEZ_resources/images/seagull.png"></img>
+		<img id="owl" name="owl" src="./FEZ_resources/images/owl.png"></img>
+		
+		<div id="timeDate">
+			<div id="hours"></div>
+			<div id="date"></div>
+			<div id="time"></div>
+		</div>
+		
+		<div id='gomez'>
+			<img id="gomezUp" 		name="gomezUp" src="./FEZ_resources/images/gomezUp.png"></img>
+			<img id="gomezBlink" 	name="gomezBlink"></img>
+			<img id="gomezLook" 	name="gomezLook"></img>
+			<img id="gomezPlay" 	name="gomezPlay"></img>
+			<img id="gomezYawn" 	name="gomezYawn"></img>
+			<img id="gomezGoSleep" 	name="gomezGoSleep"></img>
+			<img id="gomezWake" 	name="gomezWake"></img>
+			<img id="gomezSleeping" name="gomezSleeping"></img>
+			<img id="gomezJump" 	name="gomezJump"></img>
+			<img id="gomezAir" 		name="gomezAir"></img>
+		</div>
+				
+
+		<div id="slideToUnlock"></div>
+		<div id="statusBar"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,116 @@
+
+/* TODO: one HTML div per GIF for preload reasons */
+
+#gomezUp{
+opacity: 0;
+position: absolute;
+top: 255px;
+left: 120px;
+width: 80px;
+height: 110px;
+}
+
+/*#gomezBlinkPreload{
+opacity: 0;
+position: absolute;
+background-image: url(".././FEZ_resources/images/gomezBlink.gif");
+}
+#gomezJumpPreload{
+opacity: 0;
+position: absolute;
+background-image: url(".././FEZ_resources/images/gomezJump.gif");
+}*/
+
+#gomezBlink{
+opacity: 0;
+position: absolute;
+top: 290px;
+left: 140px;
+width: 55px;
+height: 20px;
+background-repeat: no-repeat;
+}
+
+#gomezJump{
+opacity: 0;
+position: absolute;
+top: 200px;
+left: 130px;
+width: 65px;
+height: 160px;
+}
+
+#gomezPlay{
+opacity: 0;
+position: absolute;
+top: 245px;
+left: 120px;
+width: 80px;
+height: 115px;
+}
+
+#gomezYawn{
+opacity: 0;
+position: absolute;
+top: 260px;
+left: 130px;
+width: 65px;
+height: 100px;
+}
+
+#gomezLook{
+opacity: 0;
+position: absolute;
+top: 265px;
+left: 120px;
+width: 75px;
+height: 95px;
+}
+
+#gomezAnim{
+opacity: 0;
+position: absolute;
+top: 170px;
+left: 120px;
+width: 105px;
+height: 195px;
+background-repeat: no-repeat;
+}
+
+#gomezGoSleep{
+opacity: 0;
+position: absolute;
+top: 260px;
+left: 125px;
+width: 95px;
+height: 100px;
+background-repeat: no-repeat;
+}
+
+#gomezWake{
+opacity: 0;
+position: absolute;
+top: 265px;
+left: 125px;
+width: 95px;
+height: 95px;
+background-repeat: no-repeat;
+}
+
+#gomezSleeping{
+opacity: 0;
+position: absolute;
+top: 305px;
+left: 120px;
+width: 105px;
+height: 60px;
+}
+
+#gomezAir{
+opacity: 0;
+position: absolute;
+top: 170px;
+left: 120px;
+width: 80px;
+height: 195px;
+}

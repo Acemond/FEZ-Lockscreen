@@ -1,0 +1,181 @@
+.preload{ opacity: 0; position: absolute }
+
+#background{
+	z-index: 0;
+	height: 480px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: visible;
+}
+#backgroundChange{
+	opacity: 0;
+	z-index: 0;
+	height: 480px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#clouds0{
+	opacity: 0;
+	z-index: 0;
+	height: 90px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(.././FEZ_resources/images/clouds0.png);
+}
+#clouds1{
+	opacity: 0;
+	z-index: 0;
+	height: 143px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(.././FEZ_resources/images/clouds1.png);
+}
+#clouds2{
+	opacity: 0;
+	z-index: 0;
+	height: 168px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(.././FEZ_resources/images/clouds2.png);
+}
+
+#cloudsChange0{
+	opacity: 0;
+	z-index: 0;
+	height: 90px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(.././FEZ_resources/images/clouds0.png);
+}
+#cloudsChange1{
+	opacity: 0;
+	z-index: 0;
+	height: 143px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(.././FEZ_resources/images/clouds1.png);
+}
+#cloudsChange2{
+	opacity: 0;
+	z-index: 0;
+	height: 168px;
+	width: 320px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url(.././FEZ_resources/images/clouds2.png);
+}
+@-webkit-keyframes cloudsMovement {
+	from { background-position-x: 0px; }
+	to { background-position-x: 320px; }
+}
+
+.rays{
+	opacity: 0;
+	z-index: 0;
+	height: 220px;
+	width: 320px;
+	position: absolute;
+}
+.raysChange{
+	opacity: 0;
+	z-index: 0;
+	height: 220px;
+	width: 320px;
+	position: absolute;
+}
+
+#sets{
+	opacity: 0;
+	z-index: 0;
+	height: 300px;
+	width: 119px;
+	position: absolute;
+	top: 68px;
+	left: 201px;
+}
+
+#setsChange{
+	opacity: 0;
+	z-index: 0;
+	height: 300px;
+	width: 119px;
+	position: absolute;
+	top: 68px;
+	left: 201px;
+}
+
+#owl{
+	opacity: 0;
+	z-index: 11;
+	width: 33px;	 
+	height: 38px;
+	position: absolute;
+	top: 31px;
+	left: 290px;
+	-webkit-transition: opacity 1s linear;
+}
+
+#seagull{
+	opacity: 0;
+	z-index: 0;
+	width: 44px;	 
+	height: 52px;
+	position: absolute;
+	top: 308px;
+	left: 16px;
+	-webkit-transition: opacity 1s linear;
+}
+
+
+#floor{
+	opacity: 0;
+	height: 170px;
+	width: 320px;
+	position: absolute;
+	top: 310px;
+	left:0px;
+}
+
+#floorChange{
+	opacity: 0;
+	height: 170px;
+	width: 320px;
+	position: absolute;
+	top: 310px;
+	left:0px;
+}
+
+
+#light{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: -95px;
+	left: -90px;
+	opacity: 0;
+	-webkit-transition: opacity .15s linear;
+	-webkit-transition-delay: 1.9s;
+	-webkit-animation: spin 5s linear infinite;
+	overflow: visible;
+}
+@-webkit-keyframes spin
+{
+	from {-webkit-transform: rotateZ(0deg);}
+	to {-webkit-transform: rotateZ(-360deg)}
+}

@@ -1,0 +1,133 @@
+#floatingSupport {
+	-webkit-transform:translateZ(500px);
+	-webkit-animation: CubeFloat .85s ease-in-out infinite;
+	-webkit-animation-direction: alternate;
+}
+@-webkit-keyframes CubeFloat{
+	from{-webkit-transform: translateY(0px);}
+	to		{-webkit-transform: translateY(8px);}
+}
+
+#experiment {
+	-webkit-perspective: 0;
+	-webkit-perspective-origin: 50% 200px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(500px);
+}
+
+/*Contains big cubes*/
+#cubeCont{
+	position: absolute;
+	left: 120px;
+	top: 100px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateY(10deg);
+}
+@-webkit-keyframes noCubeLowSpin{
+	from	{ -webkit-transform:rotateY(-270deg)}
+	to		{ -webkit-transform:rotateY(90deg)}
+}
+@-webkit-keyframes cubeLowSpinShort{
+	from	{ -webkit-transform:rotateY(-20deg)}
+	to		{ -webkit-transform:rotateY(10deg)}
+}
+@-webkit-keyframes cubeFastSpin{
+	from	{ -webkit-transform:rotateY(10deg)}
+	to		{ -webkit-transform:rotateY(730deg)}
+}
+@-webkit-keyframes cubeLowSpin{
+	from	{ -webkit-transform:rotateY(10deg)}
+	to		{ -webkit-transform:rotateY(-350deg)}
+}
+
+/*Scheme of the future cube or incomplete cube*/
+#noCube {
+	opacity: 0;
+	-webkit-transition: opacity .6s linear; 
+	position: relative;
+	height: 80px;
+	width: 80px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateX(55deg) rotateY(45deg);
+}
+
+/*Complete cube*/
+#cube {
+	opacity: 0;
+	position: relative;
+	top: -80px;
+	height: 80px;
+	width: 80px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateX(55deg) rotateY(45deg);
+}
+
+/*Small cube that appears during the animation*/
+#newCube {
+	opacity: 0;
+	-webkit-transition: opacity .75s linear;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateX(-50px) translateZ(50px);
+	-webkit-transition: 1.2s ease-out; 
+}
+
+#cube #one 	{ -webkit-transform: rotateX(90deg) translateZ(40px); background-position-x: -240px; }
+#cube #two 	{ -webkit-transform: translateZ(40px); background-position-x: -80px; }
+#cube #three	{ -webkit-transform: rotateY(90deg) translateZ(40px); background-position-x: -160px; }
+#cube #four 	{ -webkit-transform: rotateY(180deg) translateZ(40px); background-position-x: -240px; }
+#cube #five 	{ -webkit-transform: rotateY(-90deg) translateZ(40px); }
+#cube #six 	{ -webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg); background-position-x: -80px; }
+
+#cube #bord1		{ -webkit-transform: rotateX(90deg) translateY(38px) translateZ(-33px);}
+#cube #bord2		{ -webkit-transform: rotateX(90deg) rotateZ(90deg)   translateX(22.5px) translateY(15.5px) translateZ(-33px);}
+#cube #bord3		{ -webkit-transform: rotateX(90deg) rotateY(90deg)   translateX(15.5px) translateY(38px) translateZ(17.5px);}
+#cube #bord4		{ -webkit-transform: rotateZ(90deg) translateX(15.5px) translateY(15.5px) translateZ(5px);}
+#cube #bord5		{ -webkit-transform: rotateY(90deg) translateX(-22.5px) translateZ(17.5px);}
+#cube #bord6		{ -webkit-transform: translateZ(5px);}
+
+/*The following is a complete mess, but man it was hard to set...*/
+#cube #bord7		{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateX(90deg) translateY(38px) translateZ(-33px);}
+#cube #bord8		{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateX(90deg) rotateZ(90deg) translateX(22.5px) translateY(15.5px) translateZ(-33px);}
+#cube #bord9		{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateX(90deg) rotateY(90deg) translateX(15.5px) translateY(38px) translateZ(17.5px);}
+#cube #bord10	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateZ(90deg) translateX(15.5px) translateY(15.5px) translateZ(5px);}
+#cube #bord11	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateY(90deg) translateX(-22.5px) translateZ(17.5px);}
+#cube #bord12	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) translateZ(5px);}
+
+#cube #bord13	{ -webkit-transform: rotateX(90deg) translateY(38px) translateZ(-43px);}
+#cube #bord14	{ -webkit-transform: rotateX(90deg) rotateZ(90deg)   translateX(17.5px) translateY(20.5px) translateZ(-43px);}
+#cube #bord15	{ -webkit-transform: rotateX(90deg) rotateY(90deg)   translateX(20.5px) translateY(38px) translateZ(22.5px);}
+#cube #bord16	{ -webkit-transform: rotateZ(90deg) translateX(20.5px) translateY(20.5px) translateZ(-5px);}
+#cube #bord17	{ -webkit-transform: rotateY(90deg) translateX(-17.5px) translateZ(22.5px);}
+#cube #bord18	{ -webkit-transform: translateZ(-5px);}
+
+#cube #bord19	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-35px) rotateX(90deg) translateY(38px) translateZ(-43px);}
+#cube #bord20	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-35px) rotateX(90deg) rotateZ(90deg)   translateX(17.5px) translateY(20.5px) translateZ(-43px);}
+#cube #bord21	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-35px) rotateX(90deg) rotateY(90deg)   translateX(20.5px) translateY(38px) translateZ(22.5px);}
+#cube #bord22	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-35px) rotateZ(90deg) translateX(20.5px) translateY(20.5px) translateZ(-5px);}
+#cube #bord23	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-35px) rotateY(90deg) translateX(-17.5px) translateZ(22.5px);}
+#cube #bord24	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-35px) translateZ(-5px);}
+
+
+#cube #oneInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateX(90deg) translateZ(32px) translateX(4px);}
+#cube #twoInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: translateZ(36px) translateX(4px) translateY(4px);}
+#cube #threeInt	{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateY(90deg) translateZ(40px) translateY(4px);}
+#cube #fourInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateY(180deg) translateZ(36px) translateX(-4px) translateY(4px);}
+#cube #fiveInt 	{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateY(-90deg) translateZ(32px) translateY(4px);}
+#cube #sixInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg) translateX(-4px);}
+
+
+#noCube #face1 	{ -webkit-transform: rotateX(90deg) translateZ(40px); background-position-x: -80px;}
+#noCube #face2 	{ -webkit-transform: translateZ(40px);}
+#noCube #face3 	{ -webkit-transform: rotateY(-90deg) translateZ(40px); background-position-x: -160px; }
+#noCube #face4 	{ -webkit-transform: rotateY(180deg) translateZ(40px); background-position-x: -240px; }
+#noCube #face5 	{ -webkit-transform: rotateY(90deg) translateZ(40px); background-position-x: -240px; }
+#noCube #face6		{ -webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg); background-position-x: -240px; }
+#noCube #face1m	{ -webkit-transform: rotateX(90deg); background-position-x: -240px; }
+#noCube #face2m	{ background-position-x: -240px; }
+
+#noCube #face1f{ -webkit-transition-delay: 1.2s;	-webkit-transform: rotateX(90deg) translateY(19px) translateZ(19px);}
+#noCube #face2f{ -webkit-transition-delay: 1.2s; -webkit-transform: translateZ(38px);}
+#noCube #face3f{ -webkit-transition-delay: 1.2s; -webkit-transform: rotateY(-90deg) translateX(19px) translateZ(19px);}
+#noCube #face4f{ -webkit-transition-delay: 1.2s;	-webkit-transform: rotate(180deg) rotateX(90deg) translateY(19px) translateZ(19px);}
+#noCube #face5f{ -webkit-transition-delay: 1.2s;}
+#noCube #face6f{ -webkit-transition-delay: 1.2s; -webkit-transform: rotate(180deg) rotateY(-90deg) translateX(19px) translateZ(19px);}

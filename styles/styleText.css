@@ -1,0 +1,91 @@
+@font-face {
+	font-family: "pixel";
+	src: url(.././FEZ_resources/font/pixel.ttf) format("truetype");
+}
+@font-face {
+	font-family: "fezzy";
+	src: url(.././FEZ_resources/font/fezzyv2.ttf) format("truetype");
+}
+
+/* Makes the first text font switch faster by preloading font in invisible text*/
+#preload-fezzy { font-family: "fezzy"; }
+
+
+
+#slideToUnlock {
+	opacity: 0;
+	position: relative;
+	text-align: center;
+	height: 38px;
+	top:395px;
+	font-size: 18pt;
+	word-spacing: 0px;
+	color: white;
+	text-shadow:
+		-1px -1px 0px black,
+		-1px 1px 0px black,
+		1px -1px 0px black,
+		1px 1px 0px black;
+}
+
+#statusBar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 25px;
+	background-color: rgba(0, 0, 0, 0.66);
+}
+
+/*Clock area*/
+#timeDate{
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	height: 80px;
+	width: 320px;
+	-webkit-transition: .4s ease-in-out;
+}
+
+/*Clickable area*/
+#time{
+	position: absolute;
+	z-index: 10;
+	top: -5px;
+	left: 0px;
+	height: 80px;
+	width: 320px;
+	-webkit-transition: .4s ease-in-out;
+}
+
+/*hour + ampm*/
+#hours{
+	position: absolute;
+	z-index: 1;
+	height: 75px;
+	text-align: center;
+	width: 320px;
+	left: 3px;
+	font-size: 50pt;    
+}
+
+#ampm{
+	position: absolute;
+	z-index: 1;
+	height: 75px;
+	text-align: center;
+	width: 40px;
+	font-size: 20pt;    
+}
+
+#date{
+	position: absolute;
+	width: 320px;
+	height: 20px;
+	left: 0px;
+	top: 57px;
+	text-align: center;
+	z-index: 1;
+	font-size: 14pt;
+	word-spacing: 1px;
+}

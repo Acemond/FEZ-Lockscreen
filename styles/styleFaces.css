@@ -1,0 +1,59 @@
+.noFace {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	padding: 20px;
+	background-image: url(".././FEZ_resources/images/noCube.png");
+	background-repeat: no-repeat;
+}
+/*.noFaceMiddle {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	padding: 20px;
+	background-image: url(".././FEZ_resources/images/noCube.png");
+	background-repeat: no-repeat;
+}	*/
+.newCubeFace {
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	padding: 10px;
+	background-image: url(".././FEZ_resources/images/noCube.png");
+	background-position-x: -81px;
+	background-position-y: -1px;
+	background-size: 320px 80px;
+	background-repeat: no-repeat;
+}	
+.faceExt {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	padding: 20px;
+	background-image: url(".././FEZ_resources/images/facesExt.png");
+	background-repeat: no-repeat;
+}
+
+.faceInt {
+	position: absolute;
+	height: 72px;
+	width: 72px;
+}
+
+.borderType1 {
+	position: absolute;
+	height: 4px;
+	width: 35px;
+}	
+.borderType2 {
+	position: absolute;
+	height: 4px;
+	width: 45px;
+}	
+
+
+.miniCubeFace {
+	position: absolute;
+	height: 32px;
+	width: 32px;
+}	
