@@ -1,5 +1,7 @@
 # FEZ-Lockscreen
 
+![Cover](https://i.imgur.com/YS8NUsH.png)
+
 This is a lockscreen I wrote a long time ago.
 It was designed to run on an iPhone 4S.
 
