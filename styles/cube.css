@@ -9,10 +9,16 @@
 }
 
 #experiment {
+	opacity: 0;
+	-webkit-transition: opacity .6s linear;
 	-webkit-perspective: 0;
 	-webkit-perspective-origin: 50% 200px;
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform: translateZ(500px);
+}
+
+#scheme {
+	-webkit-transform-style: preserve-3d;
 }
 
 /*Contains big cubes*/
@@ -42,8 +48,6 @@
 
 /*Scheme of the future cube or incomplete cube*/
 #noCube {
-	opacity: 0;
-	-webkit-transition: opacity .6s linear; 
 	position: relative;
 	height: 80px;
 	width: 80px;
@@ -62,10 +66,14 @@
 	-webkit-transform: rotateX(55deg) rotateY(45deg);
 }
 
+#newCubeCont {
+	opacity: 0;
+	/*-webkit-transition: opacity .75s linear; HS*/
+	-webkit-transform-style: preserve-3d;
+}
+
 /*Small cube that appears during the animation*/
 #newCube {
-	opacity: 0;
-	-webkit-transition: opacity .75s linear;
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform: translateX(-50px) translateZ(50px);
 	-webkit-transition: 1.2s ease-out; 
@@ -85,7 +93,6 @@
 #cube #bord5		{ -webkit-transform: rotateY(90deg) translateX(-22.5px) translateZ(17.5px);}
 #cube #bord6		{ -webkit-transform: translateZ(5px);}
 
-/*The following is a complete mess, but man it was hard to set...*/
 #cube #bord7		{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateX(90deg) translateY(38px) translateZ(-33px);}
 #cube #bord8		{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateX(90deg) rotateZ(90deg) translateX(22.5px) translateY(15.5px) translateZ(-33px);}
 #cube #bord9		{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-45px) rotateX(90deg) rotateY(90deg) translateX(15.5px) translateY(38px) translateZ(17.5px);}
@@ -108,12 +115,12 @@
 #cube #bord24	{ -webkit-transform: rotateZ(90deg) rotateX(90deg) rotateY(90deg)  translateY(-38px) translateZ(38px) translateX(-35px) translateZ(-5px);}
 
 
-#cube #oneInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateX(90deg) translateZ(32px) translateX(4px);}
-#cube #twoInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: translateZ(36px) translateX(4px) translateY(4px);}
-#cube #threeInt	{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateY(90deg) translateZ(40px) translateY(4px);}
-#cube #fourInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateY(180deg) translateZ(36px) translateX(-4px) translateY(4px);}
-#cube #fiveInt 	{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateY(-90deg) translateZ(32px) translateY(4px);}
-#cube #sixInt		{ -webkit-transition: opacity 3s linear; -webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg) translateX(-4px);}
+#cube #oneInt		{ -webkit-transform: rotateX(90deg) translateZ(32px) translateX(4px);}
+#cube #twoInt		{ -webkit-transform: translateZ(36px) translateX(4px) translateY(4px);}
+#cube #threeInt	{ -webkit-transform: rotateY(90deg) translateZ(40px) translateY(4px);}
+#cube #fourInt		{ -webkit-transform: rotateY(180deg) translateZ(36px) translateX(-4px) translateY(4px);}
+#cube #fiveInt 	{ -webkit-transform: rotateY(-90deg) translateZ(32px) translateY(4px);}
+#cube #sixInt		{ /*-webkit-transition: opacity 3s linear; */-webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg) translateX(-4px);}
 
 
 #noCube #face1 	{ -webkit-transform: rotateX(90deg) translateZ(40px); background-position-x: -80px;}

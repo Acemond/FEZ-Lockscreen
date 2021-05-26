@@ -39,7 +39,7 @@ function miniCubeClick(event){
     $("#timeDate").css('-webkit-transform', 'translateY(-47px)');
 
     setTimeout(function(){
-        $("#noCube").css("opacity", "1");
+        $("#experiment").css("opacity", "1");
         $("#timeDate").css("-webkit-filter", "blur(2px)");
     },400);
 
@@ -51,12 +51,12 @@ function miniCubeClick(event){
     sound.setAttribute('src', './FEZ_resources/music/shard.mp3');
     sound.play();
 
-    $("#miniCube").css("opacity","0");
-    $("#miniCube").bind('webkitTransitionEnd', function(){
+    $("#miniCubeCont").css("opacity","0");
+    $("#miniCubeCont").bind('webkitTransitionEnd', function(){
         var link = document.getElementById("miniCubeTrail");
         link.parentNode.removeChild(link);
         setTimeout(function(){
-            $("#newCube").css("opacity", "1");
+            $("#newCubeCont").css("opacity", "1");
             $("#newCube").css("-webkit-transform", "translateX(1px) translateY(1px) translateZ(1px)");
             var link = document.getElementById("miniSignal");
             link.parentNode.removeChild(link);
@@ -77,8 +77,8 @@ function endSCSound(){
     }, 6000);
     setTimeout(setClockBack, 4000);
     
-    $("#noCube").css("-webkit-transition", 'opacity .1s');
-    $("#cube").css("-webkit-transition", 'opacity .1s');
+    //$("#noCube").css("-webkit-transition", 'opacity .1s');
+    //$("#cube").css("-webkit-transition", 'opacity .1s');
     
     setTimeout(switchCubes, 400);
     setTimeout(changeSpinnin, 900);

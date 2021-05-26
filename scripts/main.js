@@ -33,25 +33,27 @@ $(document).ready(function(){
 	$("#seagull").on('click', gullCry);
 });
 
-//Less important stuff that can be loaded after the window is
+// Less important stuff that can be loaded after the window is shown
 function windowLoaded(){
 	////Preload soundplayer
 	sound = document.getElementById('soundPlayer');
 	sound.setAttribute('src', './FEZ_resources/music/shard.mp3');
 	
-	//Preload the big ass cube to have fluid switch	
+	//Preload the big cube to have fluid switch	
 	$("#miniSignal").before(
 	"<div id='floatingSupport'>"+
 		"<div id='experiment'>"+
 			"<div id='cubeCont'>"+
 				"<div id='noCube'>"+
-					"<div id='newCube'>"+
-						"<div class='newCubeFace' id='face1f'></div>"+
-						"<div class='newCubeFace' id='face2f'></div>"+
-						"<div class='newCubeFace' id='face3f'></div>"+
-						"<div class='newCubeFace' id='face4f'></div>"+
-						"<div class='newCubeFace' id='face5f'></div>"+
-						"<div class='newCubeFace' id='face6f'></div>"+
+					"<div id='newCubeCont'>"+
+						"<div id='newCube'>"+
+							"<div class='newCubeFace' id='face1f'></div>"+
+							"<div class='newCubeFace' id='face2f'></div>"+
+							"<div class='newCubeFace' id='face3f'></div>"+
+							"<div class='newCubeFace' id='face4f'></div>"+
+							"<div class='newCubeFace' id='face5f'></div>"+
+							"<div class='newCubeFace' id='face6f'></div>"+
+						"</div>"+
 					"</div>"+
 					"<div id='scheme'>"+
 						"<div class='noFace' id='face1'></div>"+
@@ -115,7 +117,7 @@ function windowLoaded(){
 
 	$("#miniCubeCont").on('click', miniCubeClick);
 	if(movingClouds) {
-        random = Math.floor(Math.random()*5) + 4;
+        random = Math.floor(Math.random() * 5) + 4;
 		$(".clouds").css('-webkit-transition', 'background-position-x ' + random + 's ease-in-out');
 		$(".cloudsChange").css('-webkit-transition', 'background-position-x ' + random + 's ease-in-out');
 	}

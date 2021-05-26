@@ -28,15 +28,6 @@
 		1px 1px 0px black;
 }
 
-#statusBar {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	height: 25px;
-	background-color: rgba(0, 0, 0, 0.66);
-}
-
 /*Clock area*/
 #timeDate{
 	position: absolute;

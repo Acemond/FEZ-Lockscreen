@@ -6,14 +6,6 @@
 	background-image: url(".././FEZ_resources/images/noCube.png");
 	background-repeat: no-repeat;
 }
-/*.noFaceMiddle {
-	position: absolute;
-	height: 40px;
-	width: 40px;
-	padding: 20px;
-	background-image: url(".././FEZ_resources/images/noCube.png");
-	background-repeat: no-repeat;
-}	*/
 .newCubeFace {
 	position: absolute;
 	height: 18px;
