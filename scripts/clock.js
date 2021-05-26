@@ -117,7 +117,7 @@ function updateClock(){
 		case 11: _dispMonth = "December";
 	}
 	
-	if(mode12h) hours.innerHTML = _dispHours + ":" + _dispMinutes + "<span id='ampm'>" + ampmValue + "</span>";
+	if(mode12h) hours.innerHTML = _dispHours + ":" + _dispMinutes + "<sup id='ampm'>" + ampmValue + "</sup>";
 	else hours.innerHTML = _dispHours + ":" + _dispMinutes;
 
 	date.innerHTML = _dispDay + ", " + _dispMonth + " " + String(_date);
