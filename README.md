@@ -1,7 +1,8 @@
-# FEZ-Lockscreen
+# [FEZ-Lockscreen](https://acemond.github.io/FEZ-Lockscreen/)
 
 ![Cover](https://i.imgur.com/YS8NUsH.png)
 
+See it running: https://acemond.github.io/FEZ-Lockscreen/
 Gallery: https://imgur.com/gallery/caljL
 
 This is a lockscreen I wrote a long time ago.
