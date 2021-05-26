@@ -37,7 +37,7 @@ function gomezSleep() {
 		changeGomezState("asleep");
 		
 		if(gomez.state == "air"){
-			gomezUp();
+			wakeGomez();
 		}
 		else{
 			gomez.state = "asleep";
@@ -46,7 +46,7 @@ function gomezSleep() {
 	}, 1900);
 }
 
-function gomezUp(event){
+function wakeGomez(event){
 	$('#gomez').off('click');
 	
 	document.gomezWake.src = gomezWake_Img.src;
@@ -92,7 +92,7 @@ function lookAround(){
 	}, 3300);
 }
 
-function gomezYawn(){
+function makeGomezYawn(){
 	document.gomezYawn.src = gomezYawn_Img.src;
 	document.gomezUp.style.opacity = 0;
 	document.gomezYawn.style.opacity = 1;
@@ -105,7 +105,7 @@ function gomezYawn(){
 	}, 1300);
 }
 
-function gomezPlay(){
+function makeGomezPlay(){
 	document.gomezPlay.src = gomezPlay_Img.src;
 	document.gomezUp.style.opacity = 0;
 	document.gomezPlay.style.opacity = 1;
@@ -118,10 +118,10 @@ function gomezPlay(){
 	}, 3200);
 }
 
-function gomezJump(){
+function makeGomezJump(){
 	clearTimeout(idleAnimTimer);
 	
-	//playJumpSound(); // Too slow on iPhone :'(
+	playJumpSound();
 	
 	document.gomezJump.src = gomezJump_Img.src;
 	document.gomezUp.style.opacity = 0;
@@ -159,7 +159,6 @@ function playLandSound(){
 	sound.play();
 	
 	setTimeout(function(){
-		resetSoundPlayer();
 		if(gomez.state != "air"){
 			$("#miniCubeCont").on('click', miniCubeClick);
 			sound.setAttribute('src', './FEZ_resources/music/shard.mp3');
@@ -169,10 +168,4 @@ function playLandSound(){
 	},300);
 }
 
-
-
-
-
-
-
-
+//by Acemond

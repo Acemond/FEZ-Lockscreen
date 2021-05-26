@@ -1,38 +1,3 @@
-function createRays(rayColor)
-{
-	var j = 0;
-	for(i = nbRaysMin; i < nbRaysMax; i++)
-	{
-		if(Math.floor(Math.random()*3) != 1){
-			var ray = new Object();
-			ray.rayPos = Math.floor(Math.random()*4);
-			if(ray.rayPos < 3){
-				$("#clouds" + ray.rayPos ).after( "<div class='rays' id='ray"+ i +"'></div>" );
-				$("#cloudsChange" + ray.rayPos ).after( "<div class='raysChange' id='rayChange"+ i +"'></div>" );
-			}
-			else //if 3
-			{
-				$("#clouds" + (ray.rayPos - 1)).before( "<div class='rays' id='ray"+ i +"'></div>" );
-				$("#cloudsChange" + (ray.rayPos - 1)).before( "<div class='raysChange' id='rayChange"+ i +"'></div>" );
-			}
-		
-			ray.htmlElt = document.getElementById("ray" + i);
-			ray.htmlEltChange = document.getElementById("rayChange" + i);
-			
-			rays[j] = ray; j += 1;
-		}
-
-	}
-	randomizeRays();
-	if(rayColor!="") {
-		for(i = 0; i < rays.length; i++)
-		{
-			rays[i].htmlElt.style.backgroundImage = "url(./FEZ_resources/images/" + rayColor + rays[i].BG + ".png)";
-			rays[i].htmlEltChange.style.backgroundImage = "url(./FEZ_resources/images/" + rayColor + rays[i].BG + ".png)";
-		}
-	}
-}
-
 function randomizeRays()
 {
 	for(i = 0; i < rays.length; i++)
@@ -76,23 +41,15 @@ function randomizeRays()
 		
 		random = (Math.floor(Math.random()*30) + 30) / 100;
 		random = random * raysOpacity;	
-		setTimeout("rays[" + i + "].htmlElt.style.opacity = " + random + ";",100);
-		setTimeout("rays[" + i + "].htmlEltChange.style.opacity = " + random + ";",100);
+
+		//Delays the opacity change to make sure that transitionDuration has been affected BEFORE.
+		setTimeout("rays[" + i + "].htmlElt.style.opacity = " + random + ";",0);
+		setTimeout("rays[" + i + "].htmlEltChange.style.opacity = " + random + ";",0);
 		rays[i].opacity = random;
 	}
 }
 
-function changeRays(rayColor)
-{
-	changingRays = true;
-	removeOldRays();
-	createRays(rayColor);
-}
-
-////////////////////////////////
-// Rays color transition case //
-////////////////////////////////
-function createRays2(rayColor1, rayColor2)
+function createRays(rayColor1, rayColor2)
 {
 	var j = 0;
 	for(i = nbRaysMin; i < nbRaysMax; i++)
@@ -126,11 +83,10 @@ function createRays2(rayColor1, rayColor2)
 	}
 }
 
-function changeRays2(rayColor1, rayColor2)
+function changeRays(rayColor1, rayColor2)
 {
-	changingRays = true;
 	removeOldRays();
-	createRays2(rayColor1, rayColor2);
+	createRays(rayColor1, rayColor2);
 }
 
 function removeOldRays()
@@ -154,6 +110,5 @@ function removeOldRays()
 			oldRays[i].htmlEltChange.parentNode.removeChild(oldRays[i].htmlEltChange);
 		}
 		oldRays = new Array();
-        changingRays = false;
 	}, 3500);
 }

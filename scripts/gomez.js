@@ -1,22 +1,24 @@
 var gomez = new Object();
-var timeSeed = (_day + _month) * (_date + currentTime.getYear());
 var lastBlinkCounter = 0;
 var lastAnimCounter = 0;
 var lastAnimation = "";
 var doubleBlink = false;
 
+
+
+//Determines Gomez state at document launch
 function initGomezState(initState)
 {
 	switch(initState){
 		case "falling":
 			gomez.state = "asleep";
-			document.gomezSleeping.src = gomezSleeping_Img.src;
-			document.gomezSleeping.style.opacity = 1;
+			gomezSleeping.src = gomezSleeping_Img.src;
+			gomezSleeping.style.opacity = 1;
 			$('#gomez').on('click', function(){changeGomezState('tempRaising');});
 			break;
 		case "raising":
 			gomez.state = "up";
-			document.gomezUp.style.opacity = 1;
+			gomezUp.style.opacity = 1;
 			$("#gomez").on('click', function(){ changeGomezState('jump'); });
 			break;
 	}
@@ -40,6 +42,8 @@ function checkNextGomezState(){
 	} else { return "falling"; }
 }
 
+//This function is called when Gomez isn't doing anything.
+//It checks with complex random if Gomez should play an animation.
 function gomezIdle()
 {
 	var blink = false;
@@ -115,6 +119,9 @@ function gomezIdle()
 	}
 }
 
+//This function is called with the state we want to change Gomez to
+//Before actually launching the corresponding functions, this function makes sure the new animation can be done and if it's not already happening
+//wantedState is a state described by the switch-case below
 function changeGomezState(wantedState)
 {
 	if(gomez.state == wantedState) return;
@@ -124,14 +131,14 @@ function changeGomezState(wantedState)
 						else if(gomez.state == "blink") setTimeout("changeGomezState('falling');",100);
 						else if(gomez.state == "idleAnimation") setTimeout("changeGomezState('falling');",500); break;
 						
-		case "raising": if(gomez.state == "asleep") {gomez.state = "raising"; gomezUp();} break;
+		case "raising": if(gomez.state == "asleep") {gomez.state = "raising"; wakeGomez();} break;
 						
-		case "air":		if(gomez.state == "asleep") {gomezUp(); gomez.state = "air";}
+		case "air":		if(gomez.state == "asleep") {wakeGomez(); gomez.state = "air";}
 						else if(gomez.state == "blink") setTimeout("changeGomezState('air');",100);
 						else if(gomez.state == "up" || gomez.state == "tempUp") gomez.state = "air";
 						else if(gomez.state != "air")setTimeout("changeGomezState('air');",500); break;
 						
-		case "tempRaising":	if(gomez.state == "asleep") {gomez.state = "tempRaising"; gomezUp();} break;
+		case "tempRaising":	if(gomez.state == "asleep") {gomez.state = "tempRaising"; wakeGomez();} break;
 		case "tempUp":		if(gomez.state == "tempRaising") {gomez.state = "tempUp";} break;
 		case "tempFalling":	if(gomez.state == "tempUp") {gomez.state = "falling"; gomezSleep();}
 							else if(gomez.state == "TUBlink") setTimeout("changeGomezState('tempFalling');",100); break;
@@ -151,15 +158,15 @@ function changeGomezState(wantedState)
 							break;
 							
 		case "lookAround":	if(gomez.state == "up") {gomez.state = "idleAnimation"; lookAround();} break;
-		case "yawn":	if(gomez.state == "up") {gomez.state = "idleAnimation"; gomezYawn();} break;
-		case "play":	if(gomez.state == "up") {gomez.state = "idleAnimation"; gomezPlay();} break;
+		case "yawn":	if(gomez.state == "up") {gomez.state = "idleAnimation"; makeGomezYawn();} break;
+		case "play":	if(gomez.state == "up") {gomez.state = "idleAnimation"; makeGomezPlay();} break;
 		
-		case "jump":		if(gomez.state == "up" || gomez.state == "idleAnimation" || gomez.state == "blink") { gomez.state = "jump"; gomezJump(); }
+		case "jump":		if(gomez.state == "up" || gomez.state == "idleAnimation" || gomez.state == "blink") { gomez.state = "jump"; makeGomezJump(); }
 							else if(gomez.state == "tempUp" || gomez.state == "TUBlink")
 							{
 								clearTimeout(autoFallTO);
 								autoFallTO = setTimeout("changeGomezState('tempFalling');",5000);
-								gomez.state = "TUJump"; gomezJump();
+								gomez.state = "TUJump"; makeGomezJump();
 							}
 							break;
 							

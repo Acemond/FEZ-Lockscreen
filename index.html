@@ -1,28 +1,33 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	
-		<link rel="stylesheet" type="text/css" href="styles/styleCube.css">
-		<link rel="stylesheet" type="text/css" href="styles/styleGomez.css">
-		<link rel="stylesheet" type="text/css" href="styles/styleText.css">
-		<link rel="stylesheet" type="text/css" href="styles/styleBG.css">
-		<link rel="stylesheet" type="text/css" href="styles/styleMiniCube.css">
-		<link rel="stylesheet" type="text/css" href="styles/styleFaces.css">
+		<link rel="stylesheet" type="text/css" href="styles/cube.css">
+		<link rel="stylesheet" type="text/css" href="styles/gomez.css">
+		<link rel="stylesheet" type="text/css" href="styles/text.css">
+		<link rel="stylesheet" type="text/css" href="styles/background.css">
+		<link rel="stylesheet" type="text/css" href="styles/cubeShard.css">
+		<link rel="stylesheet" type="text/css" href="styles/faces.css">
 
 		<script type="text/javascript" src="scripts/jQuery.js"></script>
+
 		<script type="text/javascript" src="Config.js"></script>
-		<script type="text/javascript" src="scripts/script.js"></script>
+		<script type="text/javascript" src="scripts/main.js"></script>
+		<script type="text/javascript" src="scripts/cubeAnimation.js"></script>
 		<script type="text/javascript" src="scripts/gomez.js"></script>
 		<script type="text/javascript" src="scripts/gomezAnimation.js"></script>
+		<script type="text/javascript" src="scripts/assetsAnimation.js"></script>
 		<script type="text/javascript" src="scripts/rays.js"></script>
-		<script type="text/javascript" src="scripts/time.js"></script>
+		<script type="text/javascript" src="scripts/clock.js"></script>
+		<script type="text/javascript" src="scripts/environment.js"></script>
 	</head>
 	
 	
 	<body id="body" onLoad="windowLoaded()">
-		<div class="preload" id="preload-fezzy">by Acemond</div>
+		<audio id="soundPlayer" type="audio/mp3" preload></audio>
+		<div class="preload" id="preload-fezzy">by Acemond</div> <!--Fasten the text switch at first clock tap-->
 		<img class="preload" id="preload_cube_border" src="./FEZ_resources/images/bordures.png"></img>
 		<img class="preload" id="preload_cube_faceExt" src="./FEZ_resources/images/facesExt.png"></img>
 		<img class="preload" id="preload_cube_faceInt" src="./FEZ_resources/images/facesInt.png"></img>
@@ -30,13 +35,13 @@
 		
 		
 		<div id="background">
-			<div class="clouds" id="clouds2" name="clouds2"></div>
-			<div class="clouds" id="clouds1" name="clouds1"></div>
-			<div class="clouds" id="clouds0" name="clouds0"></div>
+			<div class="clouds" id="clouds2"></div>
+			<div class="clouds" id="clouds1"></div>
+			<div class="clouds" id="clouds0"></div>
 			<div id="backgroundChange">
-				<div class="cloudsChange" id="cloudsChange2" name="cloudsChange2"></div>
-				<div class="cloudsChange" id="cloudsChange1" name="cloudsChange1"></div>
-				<div class="cloudsChange" id="cloudsChange0" name="cloudsChange0"></div>
+				<div class="cloudsChange" id="cloudsChange2"></div>
+				<div class="cloudsChange" id="cloudsChange1"></div>
+				<div class="cloudsChange" id="cloudsChange0"></div>
 			</div>
 			<img id="sets" name="sets"></img>
 			<img id="setsChange" name="setsChange"></img>
