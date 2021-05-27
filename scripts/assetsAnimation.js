@@ -6,7 +6,7 @@ function owlHoot() {
         sound.setAttribute('src', './FEZ_resources/music/owlhoot.mp3');
         sound.play();
         setTimeout(function(){
-            resetSoundPlayer();
+            sound.setAttribute('src', './FEZ_resources/music/shard.mp3');
             if(gomez.state != "air"){
                 $("#miniCubeCont").on('click', miniCubeClick);
                 sound.setAttribute('src', './FEZ_resources/music/shard.mp3');
@@ -24,7 +24,7 @@ function gullCry() {
         sound.setAttribute('src', './FEZ_resources/music/gullcry.mp3');
         sound.play();
         setTimeout(function(){
-            resetSoundPlayer();
+            sound.setAttribute('src', './FEZ_resources/music/shard.mp3');
             if(gomez.state != "air"){
                 $("#miniCubeCont").on('click', miniCubeClick);
                 sound.setAttribute('src', './FEZ_resources/music/shard.mp3');
